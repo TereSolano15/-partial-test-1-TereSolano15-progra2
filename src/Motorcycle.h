@@ -5,20 +5,40 @@
 #ifndef PARTIAL_TEST_1_MOTORCYCLE_H
 #define PARTIAL_TEST_1_MOTORCYCLE_H
 #include "Vehicle.h"
+#include <iostream>
+#include <sstream>
+using namespace std;
 
-class Motocycle : public Vehicle{
+class Motorcycle : public Vehicle{
+public:
+
+    Motorcycle(bool driveLicense, int motorPotency, const string &fuelType);
+
+    Motorcycle(double price, int id, const string &model, const string &descripcion, int quantity, bool driveLicense,
+              int motorPotency, const string &fuelType);
+
+
+    void setDriveLicense(bool driveLicense);
+
+    int getMotorPotency() const;
+
+    void setMotorPotency(int motorPotency);
+
+    const string &getFuelType() const;
+
+    void setFuelType(string &fuelType);
+
+    double calculatePrice();
+
+    bool isDriveLicense() const;
+
+    string toString();
+
 private:
-public:
-    Motocycle();
+    bool driveLicense;
+    int MotorPotency;
+    string fuelType;
 
-    Motocycle(double price);
-
-    virtual ~Motocycle();
-
-    double finalPrice();
-
-
-public:
     double applyDiscount() const override;
 
 

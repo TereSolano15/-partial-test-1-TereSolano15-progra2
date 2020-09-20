@@ -37,7 +37,6 @@ public:
 
     void setType(const string &type);
 
-
     double finalRentPrice(int);
 
     virtual string toString();

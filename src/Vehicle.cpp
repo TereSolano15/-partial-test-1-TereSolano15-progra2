@@ -6,12 +6,14 @@
 
 Vehicle::Vehicle() {}
 
-Vehicle::Vehicle(double price) : price(price) {}
+Vehicle::Vehicle(double price, int id, const string &model, const string &descripcion, int quantity) : price(price),
+                                                                                                       id(id),
+                                                                                                       model(model),
+                                                                                                       descripcion(
+                                                                                                               descripcion),
+                                                                                                       quantity(
+                                                                                                               quantity) {}
 
-
-Vehicle::~Vehicle() {
-
-}
 
 double Vehicle::getPrice() const {
     return price;
@@ -25,3 +27,34 @@ double Vehicle::applyDiscount() const {
     return getPrice();
 }
 
+int Vehicle::getId() const {
+    return id;
+}
+
+void Vehicle::setId(int id) {
+    Vehicle::id = id;
+}
+
+const string &Vehicle::getModel() const {
+    return model;
+}
+
+void Vehicle::setModel(const string &model) {
+    Vehicle::model = model;
+}
+
+int Vehicle::getQuantity() const {
+    return quantity;
+}
+
+void Vehicle::setQuantity(int quantity) {
+    Vehicle::quantity = quantity;
+}
+
+const string &Vehicle::getDescripcion() const {
+    return descripcion;
+}
+
+void Vehicle::setDescripcion(const string &descripcion) {
+    Vehicle::descripcion = descripcion;
+}
