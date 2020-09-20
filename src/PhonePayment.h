@@ -4,5 +4,17 @@
 
 #ifndef PARTIAL_TEST_1_PHONEPAYMENT_H
 #define PARTIAL_TEST_1_PHONEPAYMENT_H
+#include <iostream>
+using namespace std;
+
+class PhonePayment {
+public:
+    PhonePayment();
+
+    virtual ~PhonePayment();
+
+    string processMessage();
+
+};
 
 #endif //PARTIAL_TEST_1_PHONEPAYMENT_H

@@ -3,3 +3,9 @@
 //
 
 #include "IInsurance.h"
+
+IIsurance::IIsurance() {}
+
+IIsurance::~IIsurance() {
+
+}

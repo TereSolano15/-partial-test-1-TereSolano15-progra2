@@ -3,3 +3,12 @@
 //
 
 #include "OnlinePayment.h"
+
+OnlinePayment::OnlinePayment() {}
+
+OnlinePayment::~OnlinePayment() {
+
+}
+string OnlinePayment::processMessage() {
+    return "Se paga por el website. $00.00";
+}
