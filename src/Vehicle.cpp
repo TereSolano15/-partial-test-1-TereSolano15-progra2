@@ -6,21 +6,16 @@
 
 Vehicle::Vehicle() {}
 
-Vehicle::Vehicle(double price, int id, const string &model, const string &descripcion, int quantity) : price(price),
-                                                                                                       id(id),
-                                                                                                       model(model),
-                                                                                                       descripcion(
-                                                                                                               descripcion),
-                                                                                                       quantity(
-                                                                                                               quantity) {}
+Vehicle::Vehicle(double price, int id, string &model, string &descripcionn, int quantity)
+: price(price),id(id),model(model),descripcion(descripcion),quantity(quantity) {}
 
 
 double Vehicle::getPrice() const {
     return price;
 }
 
-void Vehicle::setPrice(double price) {
-    Vehicle::price = price;
+void Vehicle::setPrice(double _price) {
+    Vehicle::price = _price;
 }
 
 double Vehicle::applyDiscount() const {
@@ -31,30 +26,30 @@ int Vehicle::getId() const {
     return id;
 }
 
-void Vehicle::setId(int id) {
-    Vehicle::id = id;
+void Vehicle::setId(int _id) {
+    Vehicle::id = _id;
 }
 
 const string &Vehicle::getModel() const {
     return model;
 }
 
-void Vehicle::setModel(const string &model) {
-    Vehicle::model = model;
+void Vehicle::setModel(const string &_model) {
+    Vehicle::model = _model;
 }
 
 int Vehicle::getQuantity() const {
     return quantity;
 }
 
-void Vehicle::setQuantity(int quantity) {
-    Vehicle::quantity = quantity;
+void Vehicle::setQuantity(int _quantity) {
+    Vehicle::quantity = _quantity;
 }
 
 const string &Vehicle::getDescripcion() const {
     return descripcion;
 }
 
-void Vehicle::setDescripcion(const string &descripcion) {
-    Vehicle::descripcion = descripcion;
+void Vehicle::setDescripcion(const string &_descripcion) {
+    Vehicle::descripcion = _descripcion;
 }

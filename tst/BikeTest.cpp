@@ -32,7 +32,7 @@ TEST(BikeTestSuite, CheckToString){
 
     bike.setId(222);
     bike.setModel("Ibis Ripmo");
-    bike.setDescription("V2 XT 2020");
+   // bike.setDescription("V2 XT 2020");
     bike.setQuantity(10);
     bike.setPrice(10);
     bike.setType("MOUNTAIN");

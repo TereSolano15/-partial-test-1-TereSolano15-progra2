@@ -44,6 +44,10 @@ double Motorcycle::calculatePrice() {
 void Motorcycle::setDriveLicense(bool driveLicense) {
     Motorcycle::driveLicense = driveLicense;
 }
+string Motorcycle::processInsurance(){
+    return "SE PROCESA UN SEGURO DE MOTO".
+}
+
 string Motorcycle::toString() {
     stringstream s;
     s<<"ID "<<getId()<<endl;
@@ -56,5 +60,6 @@ string Motorcycle::toString() {
     s<<"Driver License "<<driveLicense<<endl;
     return s.str();
 }
-
-
+double Motorcycle::finalRentPrice(){
+    return getPrice() - applyDiscount();
+}

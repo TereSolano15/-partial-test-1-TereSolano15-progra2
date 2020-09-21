@@ -11,7 +11,7 @@ class Vehicle{
 public:
     Vehicle();
 
-    Vehicle(double price, int id, const string &model, const string &descripcion, int quantity);
+    Vehicle(double price, int id,string &model, string &descripcion, int quantity);
 
     int getId() const;
 
@@ -20,7 +20,6 @@ public:
     const string &getModel() const;
 
     void setModel(const string &model);
-
 
     int getQuantity() const;
 

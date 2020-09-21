@@ -3,3 +3,9 @@
 //
 
 #include "VehicleRentManager.h"
+
+VehicleRentManager::VehicleRentManager() = default;
+
+string VehicleRentManager::payment(IRentVehicle * vehicle, IRentPayment * payment, int horas) {
+
+}

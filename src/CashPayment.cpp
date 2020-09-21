@@ -4,13 +4,11 @@
 
 #include "CashPayment.h"
 
-CashPayment::CashPayment() {}
+CashPayment::CashPayment() = default;
 
-CashPayment::~CashPayment() {
+CashPayment::~CashPayment() = default;
 
-}
-
-string CashPayment::processMessage() {
+string CashPayment::sentRentPayment() {
     return "Se paga con efectivo y tiene un descuento del 5%. $";
 }
 

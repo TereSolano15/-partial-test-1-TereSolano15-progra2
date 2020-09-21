@@ -5,17 +5,16 @@
 #ifndef PARTIAL_TEST_1_ONLINEPAYMENT_H
 #define PARTIAL_TEST_1_ONLINEPAYMENT_H
 #include <iostream>
+#include "IRentPayment.h"
 using namespace std;
 
-class OnlinePayment{
+class OnlinePayment: public IRentPayment{
 public:
     OnlinePayment();
 
     virtual ~OnlinePayment();
 
-    string processMessage();
-
-private:
+    string sentRentPayment() override;
 
 };
 

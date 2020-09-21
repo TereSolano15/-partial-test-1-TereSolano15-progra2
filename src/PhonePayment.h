@@ -5,15 +5,16 @@
 #ifndef PARTIAL_TEST_1_PHONEPAYMENT_H
 #define PARTIAL_TEST_1_PHONEPAYMENT_H
 #include <iostream>
+#include "IRentPayment.h"
 using namespace std;
 
-class PhonePayment {
+class PhonePayment : public IRentPayment{
 public:
     PhonePayment();
 
     virtual ~PhonePayment();
 
-    string processMessage();
+    string sentRentPayment() override;
 
 };
 

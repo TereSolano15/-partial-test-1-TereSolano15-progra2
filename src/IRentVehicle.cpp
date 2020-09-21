@@ -3,3 +3,5 @@
 //
 
 #include "IRentVehicle.h"
+
+IRentVehicle::IRentVehicle() {}

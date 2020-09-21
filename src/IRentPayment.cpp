@@ -3,3 +3,5 @@
 //
 
 #include "IRentPayment.h"
+
+IRentPayment::IRentPayment() {}

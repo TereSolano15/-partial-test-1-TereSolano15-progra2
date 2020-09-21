@@ -10,6 +10,7 @@
 #include <Scooter.h>
 #include <Bike.h>
 #include <Motorcycle.h>
+#include "IRentVehicle.h"
 #include "gtest/gtest.h"
 
 /**
@@ -22,7 +23,7 @@ TEST(VehicleManagerTestSuite, ScooterPayment) {
     IRentPayment *cashPayment = new CashPayment();
     IRentPayment *phonePayment = new PhonePayment();
 
-    IRentVehicle *scooterRentVehicle = new Scooter(333,"GigaByke Groove",
+    IRentVehicle *scooterRentVehicle = new Scooter(333,120,"GigaByke Groove",
                                                    "Best electric scooter", 10, 5, 20);
 
     VehicleRentManager vehicleRentManager ;

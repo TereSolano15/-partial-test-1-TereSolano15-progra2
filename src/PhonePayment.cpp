@@ -4,12 +4,11 @@
 
 #include "PhonePayment.h"
 
-PhonePayment::PhonePayment() {}
+PhonePayment::PhonePayment() = default;
 
-PhonePayment::~PhonePayment() {
+PhonePayment::~PhonePayment() = default;
 
-}
-string PhonePayment::processMessage() {
+string PhonePayment::sentRentPayment() {
     return "Se paga por el Telefono. $00.00";
 }
 

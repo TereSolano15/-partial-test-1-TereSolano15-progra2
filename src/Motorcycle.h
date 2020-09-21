@@ -34,6 +34,9 @@ public:
 
     string toString();
 
+    virtual std::string processInsurance();
+
+    double finalRentPrice();
 private:
     bool driveLicense;
     int MotorPotency;

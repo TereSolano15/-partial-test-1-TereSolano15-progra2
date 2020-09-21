@@ -4,16 +4,19 @@
 
 #include "Scooter.h"
 
-Scooter::Scooter(double price, int id, const string &model, const string &descripcion, int quantity, int hours,
-                 int mileage) : Vehicle(price, id, model, descripcion, quantity), hours(hours), mileage(mileage) {}
+Scooter::Scooter() = default;
+
+Scooter::Scooter(double price, int id, string &model, string &descripcion, int quantity, int hours, int mileage)
+        : Vehicle(price, id, model, descripcion, quantity), hours(hours), mileage(mileage) {}
+
 Scooter::Scooter(int hours, int mileage) : hours(hours), mileage(mileage) {}
 
 int Scooter::getHours() const {
     return hours;
 }
 
-void Scooter::setHours(int hours) {
-    Scooter::hours = hours;
+void Scooter::setHours(int _hours) {
+    Scooter::hours = _hours;
 }
 
 double Scooter::applyDiscount() const{
@@ -24,8 +27,8 @@ int Scooter::getMileage() const {
     return mileage;
 }
 
-void Scooter::setMileage(int mileage) {
-    Scooter::mileage = mileage;
+void Scooter::setMileage(int _mileage) {
+    Scooter::mileage = _mileage;
 }
 double Scooter::finalRentPrice(int horas){
     if(horas > 24)
@@ -43,3 +46,8 @@ string Scooter::toString() {
     s<<"Mileage: "<<getMileage()<<endl;
     return s.str();
 }
+double Scooter::finalRentPrice(){
+    return getPrice() - applyDiscount();
+}
+
+

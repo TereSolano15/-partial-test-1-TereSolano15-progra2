@@ -4,11 +4,10 @@
 
 #include "OnlinePayment.h"
 
-OnlinePayment::OnlinePayment() {}
+OnlinePayment::OnlinePayment() = default;
 
-OnlinePayment::~OnlinePayment() {
+OnlinePayment::~OnlinePayment() = default;
 
-}
-string OnlinePayment::processMessage() {
+string OnlinePayment::sentRentPayment() {
     return "Se paga por el website. $00.00";
 }
