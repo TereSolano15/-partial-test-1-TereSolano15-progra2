@@ -9,7 +9,7 @@ PhonePayment::PhonePayment() = default;
 PhonePayment::~PhonePayment() = default;
 
 string PhonePayment::sentRentPayment() {
-    return "Se paga por el Telefono. $00.00";
+    return "Se paga por el Telefono. $";
 }
 
 

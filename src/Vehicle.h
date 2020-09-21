@@ -29,6 +29,7 @@ public:
 
     void setPrice(double price);
 
+
 private:
     double price;
     int id;

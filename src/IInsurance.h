@@ -13,7 +13,7 @@ public:
 
     virtual ~IIsurance();
 
-    virtual std::string processInsurance()=0;
+    virtual string processInsurance()=0;
 
 };
 

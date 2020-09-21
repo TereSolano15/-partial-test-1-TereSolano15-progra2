@@ -9,5 +9,5 @@ OnlinePayment::OnlinePayment() = default;
 OnlinePayment::~OnlinePayment() = default;
 
 string OnlinePayment::sentRentPayment() {
-    return "Se paga por el website. $00.00";
+    return "Se paga por el website. $";
 }

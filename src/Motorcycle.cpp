@@ -42,7 +42,10 @@ void Motorcycle::setFuelType(string &_fuelType) {
 }
 
 double Motorcycle::calculatePrice() {
-    return getPrice() - (getPrice() * 0,25);
+    double sum = 0;
+    sum = getPrice() * 0,25;
+    return (getPrice() * 0,25) - sum;
+
 }
 void Motorcycle::setDriveLicense(bool _driveLicense) {
     Motorcycle::driveLicense = _driveLicense;
@@ -64,7 +67,7 @@ string Motorcycle::toString() {
     return s.str();
 }
 double Motorcycle::finalRentPrice(int horas){
-    return horas;
+   return horas * calculatePrice();
 }
 
 

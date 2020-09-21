@@ -33,9 +33,9 @@ void Scooter::setMileage(int _mileage) {
 }
 double Scooter::finalRentPrice(int horas){
     if(horas > 24)
-       return (getPrice() - (getPrice() * 0,10)) * horas;
+       return getPrice()* horas;
     else
-        return getPrice();
+        return (getPrice() * horas) - ((getPrice()*horas) * 0.10);
 }
 string Scooter::toString() {
     stringstream s;
