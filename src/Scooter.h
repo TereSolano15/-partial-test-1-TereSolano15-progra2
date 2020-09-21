@@ -14,7 +14,7 @@ public:
 
     Scooter();
 
-    Scooter(double price, int id, string model, int quantity, int hours, int mileage);
+    Scooter(float price, int id, string model, int quantity, int hours, int mileage);
 
     Scooter(int hours, int mileage);
 
@@ -26,7 +26,7 @@ public:
 
     void setHours(int hours);
 
-    double finalRentPrice(int) override;
+    float finalRentPrice(int) override;
 
     string toString();
 

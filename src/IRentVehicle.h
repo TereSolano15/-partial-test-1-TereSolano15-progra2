@@ -11,7 +11,7 @@ public:
 
     virtual ~IRentVehicle();
 
-    virtual double finalRentPrice(int)=0;
+    virtual float finalRentPrice(int)=0;
 
 };
 

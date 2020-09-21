@@ -6,15 +6,15 @@
 
 Vehicle::Vehicle() {}
 
-Vehicle::Vehicle(double price, int id, string model, int quantity)
+Vehicle::Vehicle(float price, int id, string model, int quantity)
 : price(price),id(id),model(model),quantity(quantity) {}
 
 
-double Vehicle::getPrice() const {
+float Vehicle::getPrice() const {
     return price;
 }
 
-void Vehicle::setPrice(double _price) {
+void Vehicle::setPrice(float _price) {
     Vehicle::price = _price;
 }
 

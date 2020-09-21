@@ -14,7 +14,7 @@ class Motorcycle : public Vehicle, public IRentVehicle{
 public:
     Motorcycle();
 
-    Motorcycle(double price, int id, string model, int quantity, bool driveLicense, int motorPotency,
+    Motorcycle(float price, int id, string model, int quantity, bool driveLicense, int motorPotency,
                string fuelType);
 
     Motorcycle(bool driveLicense, int motorPotency, const string &fuelType);
@@ -29,7 +29,7 @@ public:
 
     void setFuelType(string &fuelType);
 
-    double calculatePrice();
+    float calculatePrice();
 
     bool isDriveLicense() const;
 
@@ -37,7 +37,7 @@ public:
 
     virtual string processInsurance();
 
-    double finalRentPrice(int) override;
+    float finalRentPrice(int) override;
 
 private:
     bool driveLicense;

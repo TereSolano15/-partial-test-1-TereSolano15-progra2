@@ -24,7 +24,7 @@ public:
 
     virtual string toString();
 
-    double finalRentPrice(int)  override;
+    float finalRentPrice(int)  override;
 
 private:
     string type;

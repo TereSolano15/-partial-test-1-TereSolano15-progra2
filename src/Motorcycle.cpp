@@ -8,7 +8,7 @@
 
 Motorcycle::Motorcycle() = default;
 
-Motorcycle::Motorcycle(double price, int id, string model, int quantity, bool driveLicense, int motorPotency,
+Motorcycle::Motorcycle(float price, int id, string model, int quantity, bool driveLicense, int motorPotency,
                        const string fuelType) : Vehicle(price, id, model, quantity), driveLicense(driveLicense),
                                                  MotorPotency(motorPotency), fuelType(fuelType) {}
 
@@ -37,8 +37,8 @@ void Motorcycle::setFuelType(string &_fuelType) {
     Motorcycle::fuelType = _fuelType;
 }
 
-double Motorcycle::calculatePrice() {
-    double sum = 0;
+float Motorcycle::calculatePrice() {
+    float sum = 0;
     sum = getPrice() * 0,25;
     return (getPrice() * 0,25) - sum;
 
@@ -61,7 +61,7 @@ string Motorcycle::toString() {
     s<<"Driver License "<<driveLicense<<endl;
     return s.str();
 }
-double Motorcycle::finalRentPrice(int horas){
+float Motorcycle::finalRentPrice(int horas){
    return horas * calculatePrice();
 }
 

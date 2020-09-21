@@ -8,7 +8,7 @@ Scooter::Scooter() = default;
 
 Scooter::Scooter(int hours, int mileage) : hours(hours), mileage(mileage) {}
 
-Scooter::Scooter(double price, int id, string model, int quantity, int hours, int mileage) : Vehicle(price, id, model,
+Scooter::Scooter(float price, int id, string model, int quantity, int hours, int mileage) : Vehicle(price, id, model,
                                                                                                       quantity),
                                                                                               hours(hours),
                                                                                               mileage(mileage) {}
@@ -27,7 +27,7 @@ int Scooter::getMileage() const {
 void Scooter::setMileage(int _mileage) {
     Scooter::mileage = _mileage;
 }
-double Scooter::finalRentPrice(int horas){
+float Scooter::finalRentPrice(int horas){
     if(horas > 24)
        return getPrice()* horas;
     else

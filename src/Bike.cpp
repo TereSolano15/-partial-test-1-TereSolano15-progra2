@@ -12,7 +12,7 @@ Bike::Bike(double price, int id, string model, int quantity, const string type) 
 
 Bike::~Bike() = default;
 
-double Bike::finalRentPrice(int horas){
+float Bike::finalRentPrice(int horas){
     return getPrice() * horas;
 }
 
