@@ -21,10 +21,6 @@ bool Motorcycle::isDriveLicense() const {
     return driveLicense;
 }
 
-double Motorcycle::applyDiscount() const {
-    return getPrice() - (getPrice() * 0.25);
-}
-
 int Motorcycle::getMotorPotency() const {
     return MotorPotency;
 }
@@ -58,7 +54,6 @@ string Motorcycle::toString() {
     stringstream s;
     s<<"ID "<<getId()<<endl;
     s<<"Model: "<<getModel()<<endl;
-  //  s<<"Descripcion "<<getDescripcion()<<endl;
     s<<"Quaity: "<< getQuantity()<<endl;
     s<<"Price: "<<getPrice()<<endl;
     s<<"Fuel Type: "<<getFuelType()<<endl;

@@ -18,10 +18,6 @@ void Vehicle::setPrice(double _price) {
     Vehicle::price = _price;
 }
 
-double Vehicle::applyDiscount() const {
-    return getPrice();
-}
-
 int Vehicle::getId() const {
     return id;
 }

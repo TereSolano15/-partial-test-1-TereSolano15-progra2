@@ -35,7 +35,6 @@ private:
     int id;
     string model;
     int quantity;
-    virtual double applyDiscount() const;
 };
 
 

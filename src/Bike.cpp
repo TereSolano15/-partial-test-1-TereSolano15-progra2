@@ -20,7 +20,6 @@ string Bike::toString() {
     stringstream s;
     s<<"ID "<<getId()<<endl;
     s<<"Model: "<<getModel()<<endl;
-  //  s<<"Descripcion "<<getDescripcion()<<endl;
     s<<"Quaity: "<< getQuantity()<<endl;
     s<<"Price: "<<getPrice()<<endl;
     s<<"Type: "<<getType()<<endl;

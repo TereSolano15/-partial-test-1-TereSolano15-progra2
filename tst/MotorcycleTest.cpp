@@ -72,11 +72,9 @@ TEST(MotorcycleTestSuite, CheckToString){
 
     motorcycle.setId(111);
     motorcycle.setModel("BMW R1200");
-//    motorcycle.setDescription("Moto BMW R1200");
     motorcycle.setQuantity(5);
     motorcycle.setPrice(25);
     motorcycle.setDriveLicense(true);
-  //  motorcycle.setFuelType("PREMIUM");
     motorcycle.setMotorPotency(1200);
 
     EXPECT_EQ(motorcycle.toString(),"Vehicle id: 111, Model: BMW R1200, Description: Moto BMW R1200, "

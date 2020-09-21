@@ -30,8 +30,6 @@ public:
 
     string toString();
 
-    double applyDiscount() const override;
-
 private:
     int hours;
     int mileage;

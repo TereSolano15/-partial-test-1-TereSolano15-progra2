@@ -43,7 +43,7 @@ private:
     bool driveLicense;
     int MotorPotency;
     string fuelType;
-    double applyDiscount() const override;
+
 };
 
 #endif

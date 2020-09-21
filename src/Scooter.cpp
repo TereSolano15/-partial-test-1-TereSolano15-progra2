@@ -20,10 +20,6 @@ void Scooter::setHours(int _hours) {
     Scooter::hours = _hours;
 }
 
-double Scooter::applyDiscount() const{
-    return getPrice() - (getPrice() * 0.15);
-}
-
 int Scooter::getMileage() const {
     return mileage;
 }
@@ -41,7 +37,6 @@ string Scooter::toString() {
     stringstream s;
     s<<"ID "<<getId()<<endl;
     s<<"Model: "<<getModel()<<endl;
-   // s<<"Descripcion "<<getDescripcion()<<endl;
     s<<"Quaity: "<< getQuantity()<<endl;
     s<<"Price: "<<getPrice()<<endl;
     s<<"Mileage: "<<getMileage()<<endl;
