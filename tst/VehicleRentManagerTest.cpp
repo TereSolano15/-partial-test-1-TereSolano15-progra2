@@ -23,8 +23,8 @@ TEST(VehicleManagerTestSuite, ScooterPayment) {
     IRentPayment *cashPayment = new CashPayment();
     IRentPayment *phonePayment = new PhonePayment();
 
-    IRentVehicle *scooterRentVehicle = new Scooter(333,120,"GigaByke Groove",
-                                                   "Best electric scooter", 10, 5, 20);
+    IRentVehicle *scooterRentVehicle = new Scooter(333,120,"GigaByke Groove",10,5,20);
+
 
     VehicleRentManager vehicleRentManager ;
 
@@ -49,8 +49,8 @@ TEST(VehicleManagerTestSuite, BikePayment) {
     IRentPayment *cashPayment = new CashPayment();
     IRentPayment *phonePayment = new PhonePayment();
 
-    IRentVehicle *bikeRentVehicle = new Bike(222, "Ibis Ripmo",
-                                             "V2 XT 2020", 10, 10, "MOUNTAIN");
+    IRentVehicle *bikeRentVehicle = new Bike(222,123,"Ibis Ripmo",10,"MOUNTAIN");
+
 
     VehicleRentManager vehicleRentManager ;
 
@@ -75,9 +75,10 @@ TEST(VehicleManagerTestSuite, MotorcyclePayment) {
     IRentPayment *cashPayment = new CashPayment();
     IRentPayment *phonePayment = new PhonePayment();
 
-    IRentVehicle *motorcycleRentVehicle = new Motorcycle(111, "BMW R1200",
-                                                         "Moto BMW R1200", 5, 25, true,
-                                                         "PREMIUM", 1200);
+    IRentVehicle *motorcycleRentVehicle = new Motorcycle(111,123,"BMW",5,true,25,"PREMIUM");
+
+
+    //111,123,"Ibis Ripmo",10,"Mountain"
 
     VehicleRentManager vehicleRentManager ;
 

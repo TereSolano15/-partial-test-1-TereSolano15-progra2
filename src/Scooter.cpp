@@ -6,11 +6,12 @@
 
 Scooter::Scooter() = default;
 
-Scooter::Scooter(double price, int id, string &model, string &descripcion, int quantity, int hours, int mileage)
-        : Vehicle(price, id, model, descripcion, quantity), hours(hours), mileage(mileage) {}
-
 Scooter::Scooter(int hours, int mileage) : hours(hours), mileage(mileage) {}
 
+Scooter::Scooter(double price, int id, string model, int quantity, int hours, int mileage) : Vehicle(price, id, model,
+                                                                                                      quantity),
+                                                                                              hours(hours),
+                                                                                              mileage(mileage) {}
 int Scooter::getHours() const {
     return hours;
 }
@@ -40,14 +41,12 @@ string Scooter::toString() {
     stringstream s;
     s<<"ID "<<getId()<<endl;
     s<<"Model: "<<getModel()<<endl;
-    s<<"Descripcion "<<getDescripcion()<<endl;
+   // s<<"Descripcion "<<getDescripcion()<<endl;
     s<<"Quaity: "<< getQuantity()<<endl;
     s<<"Price: "<<getPrice()<<endl;
     s<<"Mileage: "<<getMileage()<<endl;
     return s.str();
 }
-double Scooter::finalRentPrice(){
-    return getPrice() - applyDiscount();
-}
+
 
 

@@ -6,8 +6,8 @@
 
 Vehicle::Vehicle() {}
 
-Vehicle::Vehicle(double price, int id, string &model, string &descripcionn, int quantity)
-: price(price),id(id),model(model),descripcion(descripcion),quantity(quantity) {}
+Vehicle::Vehicle(double price, int id, string model, int quantity)
+: price(price),id(id),model(model),quantity(quantity) {}
 
 
 double Vehicle::getPrice() const {
@@ -46,10 +46,3 @@ void Vehicle::setQuantity(int _quantity) {
     Vehicle::quantity = _quantity;
 }
 
-const string &Vehicle::getDescripcion() const {
-    return descripcion;
-}
-
-void Vehicle::setDescripcion(const string &_descripcion) {
-    Vehicle::descripcion = _descripcion;
-}

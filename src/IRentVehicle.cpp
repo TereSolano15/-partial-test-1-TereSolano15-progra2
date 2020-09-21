@@ -4,4 +4,6 @@
 
 #include "IRentVehicle.h"
 
-IRentVehicle::IRentVehicle() {}
+IRentVehicle::IRentVehicle() = default;
+
+IRentVehicle::~IRentVehicle() = default;

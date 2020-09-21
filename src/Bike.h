@@ -7,15 +7,16 @@
 #include <iostream>
 #include <sstream>
 #include "Vehicle.h"
+#include "IRentVehicle.h"
 using namespace std;
 
-class Bike: public Vehicle{
+class Bike: public Vehicle, public IRentVehicle{
 public:
     Bike();
 
-    Bike(double price, int id, string &model, string &descripcion, int quantity, const string &type);
+    Bike(double price, int id, string model, int quantity, string type);
 
-    virtual ~Bike();
+    ~Bike() override;
 
     const string &getType() const;
 
@@ -23,7 +24,8 @@ public:
 
     virtual string toString();
 
-    double finalRentPrice(int) const;
+    double finalRentPrice(int)  override;
+
 private:
     string type;
 

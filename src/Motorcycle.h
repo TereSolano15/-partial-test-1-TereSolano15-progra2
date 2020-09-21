@@ -7,16 +7,17 @@
 #include "Vehicle.h"
 #include <iostream>
 #include <sstream>
+#include "IRentVehicle.h"
 using namespace std;
 
-class Motorcycle : public Vehicle{
+class Motorcycle : public Vehicle, public IRentVehicle{
 public:
+    Motorcycle();
+
+    Motorcycle(double price, int id, string model, int quantity, bool driveLicense, int motorPotency,
+               string fuelType);
 
     Motorcycle(bool driveLicense, int motorPotency, const string &fuelType);
-
-    Motorcycle(double price, int id, const string &model, const string &descripcion, int quantity, bool driveLicense,
-              int motorPotency, const string &fuelType);
-
 
     void setDriveLicense(bool driveLicense);
 
@@ -34,26 +35,15 @@ public:
 
     string toString();
 
-    virtual std::string processInsurance();
+    virtual string processInsurance();
 
-    double finalRentPrice();
+    double finalRentPrice(int) override;
+
 private:
     bool driveLicense;
     int MotorPotency;
     string fuelType;
-
     double applyDiscount() const override;
-
-
 };
 
-#endif //PARTIAL_TEST_1_MOTORCYCLE_H
-//Motorcycle:
-//Se caracteriza porque el simple
-//alquiler de las motos tiene un 25% de descuento
-//sin importar el tipo de pago o el tipo de moto.
-//Las motos tienen un proceso para asegurarlas.
-//El resultado de ese proceso se representa con un
-//mensaje que dice: "SE PROCESA UN SEGURO DE MOTO".
-//El precio final de alquiler se caracteríza porque
-//el valor de entra son las horas de alquiler.
+#endif

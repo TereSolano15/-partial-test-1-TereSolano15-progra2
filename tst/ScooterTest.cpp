@@ -16,7 +16,7 @@ TEST(ScooterTestSuite, CalculateFinalRentPrice) {
 
     scooter.setId(333);
     scooter.setModel("GigaByke Groove");
-    scooter.setDescription("Best electric scooter");
+//    scooter.setDescription("Best electric scooter");
     scooter.setQuantity(10);
     scooter.setPrice(5);
     scooter.setMileage(20);
@@ -36,7 +36,7 @@ TEST(ScooterTestSuite, CheckToString){
 
     scooter.setId(333);
     scooter.setModel("GigaByke Groove");
-    scooter.setDescription("Best electric scooter");
+//    scooter.setDescription("Best electric scooter");
     scooter.setQuantity(10);
     scooter.setPrice(5);
     scooter.setMileage(20);

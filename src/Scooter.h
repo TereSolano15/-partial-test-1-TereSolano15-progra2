@@ -7,13 +7,16 @@
 #include <iostream>
 #include <sstream>
 #include "Vehicle.h"
+#include "IRentVehicle.h"
 
-class Scooter : public Vehicle{
+class Scooter : public Vehicle, public IRentVehicle{
 public:
 
     Scooter();
 
-    Scooter(double price, int id, string &model, string &descripcion, int quantity, int hours, int mileage);
+    Scooter(double price, int id, string model, int quantity, int hours, int mileage);
+
+    Scooter(int hours, int mileage);
 
     int getMileage() const;
 
@@ -23,16 +26,15 @@ public:
 
     void setHours(int hours);
 
-    double finalRentPrice(int);
+    double finalRentPrice(int) override;
 
     string toString();
 
-    double finalRentPrice();
+    double applyDiscount() const override;
 
 private:
-    int hours{};
-    int mileage{};
-    double applyDiscount() const override;;
+    int hours;
+    int mileage;
 
 };
 #endif //PARTIAL_TEST_1_SCOOTER_H

@@ -11,7 +11,7 @@ class Vehicle{
 public:
     Vehicle();
 
-    Vehicle(double price, int id,string &model, string &descripcion, int quantity);
+    Vehicle(double price, int id,string model, int quantity);
 
     int getId() const;
 
@@ -29,18 +29,11 @@ public:
 
     void setPrice(double price);
 
-    const string &getDescripcion() const;
-
-    void setDescripcion(const string &descripcion);
-
-
 private:
     double price;
     int id;
     string model;
-    string descripcion;
     int quantity;
-
     virtual double applyDiscount() const;
 };
 

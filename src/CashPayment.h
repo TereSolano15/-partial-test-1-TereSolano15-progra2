@@ -17,8 +17,6 @@ public:
 
     string sentRentPayment() override;
 
-private:
 
-    double applyDiscount() const override;
 };
 #endif //PARTIAL_TEST_1_CASHPAYMENT_H

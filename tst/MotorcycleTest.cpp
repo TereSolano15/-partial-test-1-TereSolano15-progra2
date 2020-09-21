@@ -14,11 +14,11 @@ TEST(MotorcycleTestSuite, CalculatePriceWithDiscount) {
 
     motorcycle.setId(111);
     motorcycle.setModel("BMW R1200");
-    motorcycle.setDescription("Moto BMW R1200");
+//    motorcycle.setDescription("Moto BMW R1200");
     motorcycle.setQuantity(5);
     motorcycle.setPrice(25);
     motorcycle.setDriveLicense(true);
-    motorcycle.setFuelType("PREMIUM");
+//    motorcycle.setFuelType("Gas");
     motorcycle.setMotorPotency(1200);
 
     // Recordar que existe un descuento de 25% sobre el costo por hora de alquiler para las motos
@@ -34,11 +34,11 @@ TEST(MotorcycleTestSuite, ProcessInsurance) {
 
     motorcycle.setId(111);
     motorcycle.setModel("BMW R1200");
-    motorcycle.setDescription("Moto BMW R1200");
+   // motorcycle.setDescription("Moto BMW R1200");
     motorcycle.setQuantity(5);
     motorcycle.setPrice(25);
     motorcycle.setDriveLicense(true);
-    motorcycle.setFuelType("PREMIUM");
+    //motorcycle.setFuelType("PREMIUM");
     motorcycle.setMotorPotency(1200);
 
     EXPECT_EQ(motorcycle.processInsurance(),"SE PROCESA UN SEGURO DE MOTO");
@@ -53,11 +53,11 @@ TEST(MotorcycleTestSuite, CalculateFinalRentPrice) {
 
     motorcycle.setId(111);
     motorcycle.setModel("BMW R1200");
-    motorcycle.setDescription("Moto BMW R1200");
+//    motorcycle.setDescription("Moto BMW R1200");
     motorcycle.setQuantity(5);
     motorcycle.setPrice(25);
     motorcycle.setDriveLicense(true);
-    motorcycle.setFuelType("PREMIUM");
+//    motorcycle.setFuelType("PREMIUM");
     motorcycle.setMotorPotency(1200);
 
     // Si una moto se alquila 24 horas, al final el cliente tendría que pagar $450
@@ -72,11 +72,11 @@ TEST(MotorcycleTestSuite, CheckToString){
 
     motorcycle.setId(111);
     motorcycle.setModel("BMW R1200");
-    motorcycle.setDescription("Moto BMW R1200");
+//    motorcycle.setDescription("Moto BMW R1200");
     motorcycle.setQuantity(5);
     motorcycle.setPrice(25);
     motorcycle.setDriveLicense(true);
-    motorcycle.setFuelType("PREMIUM");
+  //  motorcycle.setFuelType("PREMIUM");
     motorcycle.setMotorPotency(1200);
 
     EXPECT_EQ(motorcycle.toString(),"Vehicle id: 111, Model: BMW R1200, Description: Moto BMW R1200, "
